@@ -24,7 +24,8 @@ def itMethod(x0,a,b,F_der_min,F_dder_max):
                         Newton Method:
 -----------------------------------------------------------------------------'''
 def newtonMethod(x0,a,b,F_der_min,F_dder_max,eps):
-    m=(1/2)*(F_dder_max/F_der_min)
+    #Applying Newton's Method for zero calculation to F(x)
+    m=(1/2)*(F_dder_max/F_der_min) #Multiplier for error
     err=abs(b-a) #x0 error
     x1
     i=0;
@@ -37,6 +38,7 @@ def newtonMethod(x0,a,b,F_der_min,F_dder_max,eps):
     print("Raíz: "+str(dm.Decimal(x0))+"\n")
     print("Erro: "+str(dm.Decimal(err))+"\n")
     return
+  
 def iteraMethod(x0,eps,n_max):
     x1=F(x0)
     err=abs()
