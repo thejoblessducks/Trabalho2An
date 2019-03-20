@@ -8,9 +8,9 @@ import time as tm
 -----------------------------------------------------------------------------'''
 error = lambda y,x: y*(10**(-x))
 
-F = lambda x: (10*mt.exp(-0.5*x)*mtcos(2x) -4)
+F = lambda x: (10*mt.exp(-0.5*x)*mtcos(2*x) -4)
 
-F_deriv = lambda x: exp(-0.5*x)*(-20*mt.sin(2x)-5*mt.cos(2x))
+F_deriv = lambda x: exp(-0.5*x)*(-20*mt.sin(2*x)-5*mt.cos(2*x))
 
 '''-----------------------------------------------------------------------------
                         Iterative Method:
