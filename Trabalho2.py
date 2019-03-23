@@ -55,6 +55,8 @@ def newtonMethod(x0,a,b,x_der_min,x_dder_max,eps):
     print("Raíz: "+str(dm.Decimal(x0))+"\n")
     print("Erro: "+str(dm.Decimal(err))+"\n")
     return
+  
+  
 #Tests-------------------------------------------
 print("Newton Method:\n")
 newtonMethod(0.54,0.5,0.54,0.5,0.5,error(5,12))
