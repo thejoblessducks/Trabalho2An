@@ -15,8 +15,6 @@ F_deriv = lambda x: mt.exp(-0.5*x)*(-20*mt.sin(2*x)-5*mt.cos(2*x)) #F'(x)
 
 F_dderiv = lambda x: mt.exp(-0.5*x)*(20*mt.sin(2*x)-37.5*mt.cos(2*x)) #F''(x)
 
-#f = lambda x: -2*(mt.log(2/(5*mt.cos(2*x)))) #f(x)=-2ln(2/5cos(2x))
-
 f = lambda x: 0.5*(mt.acos((2*mt.exp(0.5*x))/5))#f(x)=1/2*arcos(2e^0.5x/5)
 
 
