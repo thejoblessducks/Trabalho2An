@@ -62,4 +62,4 @@ print("Newton Method:\n")
 newtonMethod(0.54,0.5,0.54,0.5,0.5,error(5,12))
 
 print("Itera Method:\n")
-itMethod(0.5,error(5,12))
+itMethod(0.54,error(5,12))
