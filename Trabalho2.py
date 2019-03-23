@@ -1,3 +1,4 @@
+
 from __future__ import division
 import numpy as np
 import math as mt 
@@ -14,13 +15,28 @@ F_deriv = lambda x: mt.exp(-0.5*x)*(-20*mt.sin(2*x)-5*mt.cos(2*x)) #F'(x)
 
 F_dderiv = lambda x: mt.exp(-0.5*x)*(20*mt.sin(2*x)-37.5*mt.cos(2*x)) #F''(x)
 
+#f = lambda x: -2*(mt.log(2/(5*mt.cos(2*x)))) #f(x)=-2ln(2/5cos(2x))
+
+f = lambda x: 0.5*(mt.acos((2*mt.exp(0.5*x))/5))#f(x)=1/2*arcos(2e^0.5x/5)
+
+
 '''-----------------------------------------------------------------------------
                         Iterative Method:
 -----------------------------------------------------------------------------'''
 
-def itMethod(x0,a,b,F_der_min,F_dder_max):
-    m=(1/2)*(F_dder_max/F_der_min)
-    return m
+def itMethod(x0,eps):
+    x1=f(x0)
+    err=abs(x1-x0)
+    i=1
+    while err > eps:
+        x0=x1
+        x1=f(x0)
+        err=abs(x1-x0)
+        i+=1
+    print("Iterações: "+str(i)+"\n")
+    print("Raíz: "+str(dm.Decimal(x1))+"\n")
+    print("Erro: "+str(dm.Decimal(err))+"\n")
+    return
 
 '''-----------------------------------------------------------------------------
                         Newton Method:
@@ -42,4 +58,8 @@ def newtonMethod(x0,a,b,x_der_min,x_dder_max,eps):
     print("Erro: "+str(dm.Decimal(err))+"\n")
     return
 #Tests-------------------------------------------
+print("Newton Method:\n")
 newtonMethod(0.54,0.5,0.54,0.5,0.5,error(5,12))
+
+print("Itera Method:\n")
+itMethod(0.5,error(5,12))
